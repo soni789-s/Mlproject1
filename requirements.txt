@@ -4,4 +4,6 @@
  scikit-learn
  dataclasses
  dill
+ catboost
+ xgboost
  # -e .
