@@ -28,12 +28,38 @@ class ModelTrainer:
                "Decision Tree":DecisionTreeRegressor(),
                "Gradient Boosting":GradientBoostingRegressor(),
                "Linear Regression":LinearRegression(),
-               "K-Neighbors Classifier":KNeighborsRegressor(),
-               "XGClassifier":XGBRegressor(),
-               "CatBoosting Classifier":CatBoostRegressor(verbose=False),
-               "Adaboost Classifier":AdaBoostRegressor()
+               "XGRegressor":XGBRegressor(),
+               "CatBoosting Regressor":CatBoostRegressor(verbose=False),
+               "Adaboost Regressor":AdaBoostRegressor()
            }
-           model_report:dict = evaluate_models(x_train,y_train,x_test,y_test,models)
+
+           params = {
+               "Decision Tree" : {
+                   "criterion" : ["squared_error","friedman_mse","absolute_error","poisson"]
+               },
+               "Random Forest" : {
+                   "n_estimators" : [8,16,32,64,128,256]
+               },
+               "Gradient Boosting" : {
+                   "learning_rate" : [0.1,0.01,0.05,0.001],
+                   "subsample" : [0.6,0.7,0.75,0.8,0.85,0.9]
+               },
+               "Linear Regression" : {},
+                "XGRegressor" : {
+                    "learning_rate":[0.1,0.01,0.5,0.001],
+                    "n_estimators" : [8,16,32,64,128,256]
+                },
+                "CatBoosting Regressor":{
+                    "depth" :[8,8,10],
+                    "learning_rate":[0.01,0.05,0.1],
+                    "iterations":[30,50,100]
+                },
+                "Adaboost Regressor":{
+                    "learning_rate":[0.01,0.5,0.1,0.001],
+                    "n_estimators" : [8,16,32,64,128,256]
+                }
+           }
+           model_report:dict = evaluate_models(x_train,y_train,x_test,y_test,models,params)
 
            best_model_score = max(sorted(model_report.values()))
            best_model_name = [key for key,value in model_report.items() if value == best_model_score]
