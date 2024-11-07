@@ -1,13 +1,9 @@
 # Student Performance Prediction
 
-<<<<<<< HEAD
-Dataset Features
-
 # Gender:
 
 ## Dataset Features
 
-> > > > > > > 50d6b783e404043a372d20f85e802516e60490fe
 
 ### Gender
 
