@@ -31,7 +31,7 @@ class DataTransformation:
 
             cat_pipeline = Pipeline(steps=[
                 ("imputer",SimpleImputer(strategy="most_frequent")),
-                ("OnehotEncoder",OneHotEncoder()),
+                ("OnehotEncoder",OneHotEncoder(handle_unknown='ignore')),
                 ("sacler",StandardScaler(with_mean=False))
             ])
 
