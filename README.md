@@ -1,9 +1,6 @@
 # Student Performance Prediction
 
-# Gender:
-
 ## Dataset Features
-
 
 ### Gender
 
