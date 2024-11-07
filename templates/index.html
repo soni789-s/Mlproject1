@@ -2,14 +2,14 @@
 <html>
   <body>
     <div class="login">
-      <h1>Student Exam Performance Indicator</h1>
+      <h1 style="color: blue">Student Exam Performance Indicator</h1>
 
       <form action="{{ url_for('predict_datapoint')}}" method="post">
-        <h1>
+        <h2>
           <legend>Student Exam Performance Prediction</legend>
-        </h1>
+        </h2>
         <div class="mb-3">
-          <label class="form-label">Gender</label>
+          <label class="form-label">Gender :</label>
           <select
             class="form-control"
             name="gender"
@@ -23,8 +23,9 @@
             <option value="female">Female</option>
           </select>
         </div>
+        <br />
         <div class="mb-3">
-          <label class="form-label">Race or Ethnicity</label>
+          <label class="form-label">Race or Ethnicity :</label>
           <select
             class="form-control"
             name="ethnicity"
@@ -41,8 +42,9 @@
             <option value="group E">Group E</option>
           </select>
         </div>
+        <br />
         <div class="mb-3">
-          <label class="form-label">Parental Level of Education</label>
+          <label class="form-label">Parental Level of Education :</label>
           <select
             class="form-control"
             name="parental_level_of_education"
@@ -60,8 +62,9 @@
             <option value="some high school">some high school</option>
           </select>
         </div>
+        <br />
         <div class="mb-3">
-          <label class="form-label">Lunch Type</label>
+          <label class="form-label">Lunch Type :</label>
           <select
             class="form-control"
             name="lunch"
@@ -75,8 +78,9 @@
             <option value="standard">standard</option>
           </select>
         </div>
+        <br />
         <div class="mb-3">
-          <label class="form-label">Test preparation Course</label>
+          <label class="form-label">Test preparation Course :</label>
           <select
             class="form-control"
             name="test_preparation_course"
@@ -90,8 +94,9 @@
             <option value="completed">Completed</option>
           </select>
         </div>
+        <br />
         <div class="mb-3">
-          <label class="form-label">Writing Score out of 100</label>
+          <label class="form-label">Writing Score out of 100 :</label>
           <input
             class="form-control"
             type="number"
@@ -101,8 +106,9 @@
             max="100"
           />
         </div>
+        <br />
         <div class="mb-3">
-          <label class="form-label">Reading Score out of 100</label>
+          <label class="form-label">Reading Score out of 100 :</label>
           <input
             class="form-control"
             type="number"
@@ -112,6 +118,7 @@
             max="100"
           />
         </div>
+        <br />
         <div class="mb-3">
           <input
             class="btn btn-primary"
@@ -120,6 +127,7 @@
             required
           />
         </div>
+        <br />
       </form>
       <h2>THE prediction is {{results}}</h2>
     </div>
