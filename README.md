@@ -23,6 +23,6 @@ The **score** obtained by the student in the reading portion of the test.
 ### Writing Score
 The **score** obtained by the student in the writing portion of the test.
 
-### Math Score (Predicted Feature)
+### Math Score (Prediction Feature)
 The **student's score** on the math portion of the test. This is a continuous variable and a key indicator of academic performance.
 
