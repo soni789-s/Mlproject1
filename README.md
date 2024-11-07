@@ -34,4 +34,4 @@ The **score** obtained by the student in the writing portion of the test.
 
 The **student's score** on the math portion of the test. This is a continuous variable and a key indicator of academic performance.
 
-![Web Application Screenshot](images\web image.pgn)
+![Web Application Screenshot](images/web image.pgn)
